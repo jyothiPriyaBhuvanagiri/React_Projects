@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './App.css';
-
+import Input from "./components/input";
+import Board from "./components/board";
 
 function App() {
   const [taskList, setTaskList] = useState([]);
