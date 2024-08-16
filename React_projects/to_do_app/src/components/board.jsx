@@ -1,4 +1,4 @@
-const Board = ({ task, index, taskList, setTaskList }) => {
+const Board = ({ task, index, setTaskList }) => {
     const handleButtonDelete = () => {
         setTaskList((currentTaskList) =>
             currentTaskList.filter((_, idx) => idx !== index)
