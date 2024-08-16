@@ -3,8 +3,8 @@ const Board = ({ task, index, taskList, setTaskList }) => {
         let removeIndex = taskList.indexOf(task);
         taskList.splice(removeIndex, 1);
         setTaskList((currentTaskList) =>
-            currentTaskList.filter((todo => index === removeIndex)
-            ));
+            currentTaskList.filter((_, idx) => idx !== removeIndex)
+    );
     };
 
     return (
