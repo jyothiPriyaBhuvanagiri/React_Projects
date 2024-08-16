@@ -1,9 +1,7 @@
 const Board = ({ task, index, taskList, setTaskList }) => {
     const handleButtonDelete = () => {
-        let removeIndex = taskList.indexOf(task);
-        taskList.splice(removeIndex, 1);
         setTaskList((currentTaskList) =>
-            currentTaskList.filter((_, idx) => idx !== removeIndex)
+            currentTaskList.filter((_, idx) => idx !== index)
     );
     };
 
