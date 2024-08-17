@@ -21,8 +21,12 @@ console.log(notes)
   return (
     <DndProvider backend={HTML5Backend}>
       <h1 className="text-center text-3xl font-semibold mt-4 py-2">Drag And Drop Application</h1>
-   <Bin></Bin>
-        <Note></Note>
+        {notes.map(item  =>  <Note
+            Key= {new Date().getTime() + Math.floor(Math.random()*1000)}
+            note={item}
+        />
+            )}
+     <Bin/>
     </DndProvider>
   );
 }
